@@ -11,6 +11,9 @@ package problem3;
 public class Question3 {
 
     static boolean find(int[][] ints, int row, int columns, int target) {
+        if (ints.length == 0 || ints[0].length == 0) {
+            return false;
+        }
         for (int i = 0, j = columns - 1; i < row && j >= 0; ) {
             if (target > ints[i][j]) {
                 i++;
@@ -39,6 +42,8 @@ public class Question3 {
         System.out.println(find(ints, ints.length, ints.length, 0));
 //        在数组之间但并不存在
         System.out.println(find(ints, ints.length, ints.length, 5));
-//        特殊输入 java中int无
+//        特殊输入 空
+        int[][] test2 = {{}};
+        System.out.println(find(test2, test2.length, test2.length, 16));
     }
 }
