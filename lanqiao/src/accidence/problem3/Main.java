@@ -1,4 +1,4 @@
-package lanqiao.accidence.problem3;
+package accidence.problem3;
 
 import java.text.DecimalFormat;
 import java.util.Scanner;

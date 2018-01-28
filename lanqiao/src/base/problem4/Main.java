@@ -1,4 +1,4 @@
-package lanqiao.base.problem4;
+package base.problem4;
 
 import java.util.Scanner;
 

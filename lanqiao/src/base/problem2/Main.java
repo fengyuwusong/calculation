@@ -1,4 +1,4 @@
-package lanqiao.base.problem2;
+package base.problem2;
 
 /**
  * Created by fengyuwusong on 2018/1/28 19:27.

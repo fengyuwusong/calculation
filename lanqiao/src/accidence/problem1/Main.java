@@ -1,4 +1,4 @@
-package lanqiao.accidence.problem1;
+package accidence.problem1;
 
 import java.util.Scanner;
 
