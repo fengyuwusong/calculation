@@ -1,10 +1,11 @@
-package accidence.problem3;
+package begin.problem3;
 
 import java.text.DecimalFormat;
 import java.util.Scanner;
 
 /**
  * Created by fengyuwusong on 2018/1/28 16:59.
+ * 	圆的面积
  * 问题描述
  * 给定圆的半径r，求圆的面积。
  * 输入格式

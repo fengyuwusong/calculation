@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 /**
  * Created by fengyuwusong on 2018/1/28 22:38.
+ * 杨辉三角形
  * 问题描述
  * 杨辉三角形又称Pascal三角形，它的第i+1行是(a+b)i的展开式的系数。
  * <p>

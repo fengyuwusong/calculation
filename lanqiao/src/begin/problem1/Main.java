@@ -1,9 +1,10 @@
-package accidence.problem1;
+package begin.problem1;
 
 import java.util.Scanner;
 
 /**
  * Created by fengyuwusong on 2018/1/28 17:30.
+ * 	A+B问题
  * 问题描述
  * 输入A、B，输出A+B。
  * 说明：在“问题描述”这部分，会给出试题的意思，以及所要求的目标。

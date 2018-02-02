@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 /**
  * Created by fengyuwusong on 2018/1/28 22:27.
+ * 查找整数
  * 问题描述
  * 给出一个包含n个整数的数列，问整数a在数列中的第一次出现是第几个。
  * <p>

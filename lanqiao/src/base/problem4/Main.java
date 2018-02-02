@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 /**
  * Created by fengyuwusong on 2018/1/28 22:16.
+ * 数列特征
  * 问题描述
  * 给出n个数，找出这n个数的最大值，最小值，和。
  * <p>

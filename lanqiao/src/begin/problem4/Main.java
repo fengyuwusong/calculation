@@ -1,9 +1,10 @@
-package accidence.problem4;
+package begin.problem4;
 
 import java.util.Scanner;
 
 /**
  * 问题描述
+ * 	Fibonacci数列
  * Fibonacci数列的递推公式为：Fn=F(n-1)+F(n-2)，其中F1=F2=1。
  * 当n比较大时，Fn也非常大，现在我们想知道，Fn除以10007的余数是多少。
  * 输入格式

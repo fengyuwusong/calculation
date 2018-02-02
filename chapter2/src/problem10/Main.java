@@ -51,6 +51,8 @@ package problem10;
  * 优点：
  * 无需进行额外的循环
  */
+
+
 public class Main {
     //    基本解法
 //    public int NumberOf1(int n) {
@@ -83,9 +85,6 @@ public class Main {
         Main main = new Main();
         int res = main.NumberOf1(-2147483648);
         System.out.println(res);
-        System.out.println(Integer.toBinaryString(20));
-        System.out.println(Integer.toBinaryString(13));
-        System.out.println(Integer.toBinaryString(20 ^ 13));
     }
 }
 

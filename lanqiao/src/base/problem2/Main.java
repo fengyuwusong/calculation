@@ -2,6 +2,7 @@ package base.problem2;
 
 /**
  * Created by fengyuwusong on 2018/1/28 19:27.
+ * 01字串
  * 问题描述
  * 对于长度为5位的一个01串，每一位都可能是0或1，一共有32种可能。它们的前几个是：
  * <p>

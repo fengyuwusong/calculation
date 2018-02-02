@@ -1,9 +1,10 @@
-package accidence.problem2;
+package begin.problem2;
 
 import java.util.Scanner;
 
 /**
  * Created by fengyuwusong on 2018/1/28 17:15.
+ * 序列求和
  * 问题描述
  * 求1+2+3+...+n的值。
  * 输入格式
