@@ -1,18 +1,73 @@
 package problem44;
 
+import java.util.Random;
+
 /**
  * Created by fengyuwusong on 2018/3/2 23:15.
  * 题目描述
- * LL今天心情特别好,因为他去买了一副扑克牌,发现里面居然有2个大王,2个小王(一副牌原本是54张^_^)...他随机从中抽出了5张牌,
- * 想测测自己的手气,看看能不能抽到顺子,如果抽到的话,他决定去买体育彩票,嘿嘿！！
- * “红心A,黑桃3,小王,大王,方片5”,“Oh My God!”不是顺子.....
- * LL不高兴了,他想了想,决定大\小 王可以看成任何数字,并且A看作1,J为11,Q为12,K为13。
- * 上面的5张牌就可以变成“1,2,3,4,5”(大小王分别看作2和4),“So Lucky!”。
- * LL决定去买体育彩票啦。 现在,要求你使用这幅牌模拟上面的过程,然后告诉我们LL的运气如何。
- * 为了方便起见,你可以认为大小王是0。
+ * 判断数组的数是不是扑克牌的顺子。大小王可以做任意牌，用0表示。
+ * 例如 1 3 4 6 5 0 是顺子
+ * <p>
+ * 思路：
+ * 先将数组排序->统计0的个数->统计排序之后数组相邻间的空缺总数->如果空缺数大于0的个数则不是，反之是。
+ * 注意点：如果有非零数重复出现则必定不是。
  */
 public class Main {
-    public boolean isContinuous(int [] numbers) {
-return false;
+    public boolean isContinuous(int[] numbers) {
+        if (numbers==null||numbers.length==0)
+            return false;
+        quickSort(numbers, 0, numbers.length - 1, numbers.length);
+        int countZero = 0;
+        int countNot = 0;
+        for (int i = 0; i < numbers.length; i++) {
+            if (numbers[i] == 0)
+                countZero++;
+            if (i > 0 && numbers[i - 1] != 0) {
+                //   判断是否有对子
+                if (numbers[i - 1] == numbers[i])
+                    return false;
+                if (numbers[i] - 1 != numbers[i - 1])
+                    countNot += numbers[i] - numbers[i - 1] - 1;
+            }
+        }
+        return countZero >= countNot;
+    }
+
+    //    快排
+    public void quickSort(int[] numbers, int start, int end, int len) {
+        if (len == 0 || end <= start)
+            return;
+//        取范围内任意随机数
+        int mid = new Random().nextInt(len) + start;
+        int small = start;
+//        先将中间数置于最后
+        swap(numbers, mid, end);
+//        找到目标数排序后所在的位置
+        for (int i = start; i < end; i++) {
+            if (numbers[end] > numbers[i]) {
+                if (i != small) {
+                    swap(numbers, i, small);
+                }
+                small++;
+            }
+        }
+        swap(numbers, end, small);
+//        递归左右部分
+        quickSort(numbers, start, small - 1, small - start);
+        quickSort(numbers, small + 1, end, end - small);
+    }
+
+    private void swap(int[] numbers, int i, int small) {
+        int temp = numbers[i];
+        numbers[i] = numbers[small];
+        numbers[small] = temp;
+    }
+
+    public static void main(String[] args) {
+        Main main = new Main();
+        int[] i = new int[]{0, 3, 2, 6, 4};
+        System.out.println(main.isContinuous(i));
+        int[] i2 = new int[]{1, 3, 0, 7, 0};
+        System.out.println(main.isContinuous(i2));
     }
 }

@@ -1,4 +1,4 @@
-package problem3;
+package question3;
 
 
 /**
